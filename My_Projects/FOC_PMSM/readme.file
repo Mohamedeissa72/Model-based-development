@@ -1,1 +1,32 @@
+#Decoumentation
 
+****Hysteresis current controller 
+Speed controller calculates the difference between 
+the reference speed (ω_ref) and the actual speed (ω)producing an error, which is fed to the PI controller.
+PI controllers are used widely for motion control systems. An incremental encoder is used as a position sensor. 
+The dynamic d q modeling is used for the study of motor during transient and steady state. It is done 
+by converting the dqo variables to three phase 
+currents by using inverse Parks transformation.
+****PMSM Drive System
+In the PMSM, excitation flux is set-up by magnets; subsequently no magnetizing current is needed from the supply.
+This easily enables the application of the flux orientation mechanism by forcing the d_axis component of the stator current 
+vector (id*) to be zero. As a result, the electromagnetic torque will be directly 
+proportional to the q_axis component of the stator current vector (iq*) hence better dynamic performance is obtained by controlling 
+the electromagnetic torque separately.
+A system configuration of a vectorcontrolled 
+PMSM drive system in the vector control scheme, torque control can be carried out by suitable regulation of the stator 
+current vector; this implies that accurate speed control depends on how well the current vector is regulated. In highperformance vector drives, 
+a currentcontrol loop, with a considerably high bandwidth, is necessary to ensure accurate current tracking, to shorten the transient period as much as 
+possible and to force the voltage source inverter (VSI) to equivalently act as a current source amplifier within the current loop bandwidth. In this 
+work, a hysteresisband current controlled VSI is used. To achieve a regular switching frequency and low harmonic content in the stator currents,
+a band hysteresis current controller is used.This controller will generate the reference currents with the inverter within a range which is fixed by the width of the band gap.
+In this controller thedesired current of a given phase (ia*,ib*ic*) is summed with the negative of the measured current (ia*,ib*,ic*). 
+The error is fed to a comparator having a hysteresis band. When the error crosses the lower limit of the hysteresis band, the upper switch of the 
+inverter leg is turned on. But when the current attempts to become less than the upper reference band, the bottom switch is turned on. 
+
+#Conculsion
+The proposed field oriented vector controlled PMSM drive can handle the effects of step change 
+in reference speed and parameter variations. The overall system performances are quite good in 
+terms of dynamic, transient and steadystate responses. Simulation and experimental results show that the 
+proposed control scheme guarantees stable and robust response of the PMSM drive, under a wide range of operating conditions. Subsequently, it can 
+be utilized in high performance motion control applications.
